@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -6,7 +6,7 @@ using System.Text;
 using ICSharpCode.NRefactory.CSharp;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
 
-namespace ESP.CodeGenerators
+namespace ESPCodeGenerators
 {
     [Guid("B65130B0-809E-415F-AE0C-D130F6AA02BD")]
     public class CacheProviderGenerator : BaseCodeGeneratorWithSite

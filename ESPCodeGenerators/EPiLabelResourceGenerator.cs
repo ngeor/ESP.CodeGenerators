@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Xml;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
 
-namespace ESP.CodeGenerators
+namespace ESPCodeGenerators
 {
     /// <summary>
     /// Generates strongly typed classes based on EPiServer language files.

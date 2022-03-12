@@ -1,20 +1,11 @@
-﻿using System;
-using System.ComponentModel.Design;
-using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
+using System;
 using System.Runtime.InteropServices;
 using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.VisualStudio;
-using Microsoft.VisualStudio.OLE.Interop;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
-using Microsoft.Win32;
 using Task = System.Threading.Tasks.Task;
 
-namespace ESP.CodeGenerators.VSIX
+namespace ESPCodeGenerators
 {
     /// <summary>
     /// This is the class that implements the package exposed by this assembly.
@@ -34,28 +25,15 @@ namespace ESP.CodeGenerators.VSIX
     /// </para>
     /// </remarks>
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
-    [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About
-    [Guid(VSPackage.PackageGuidString)]
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
+    [Guid(ESPCodeGeneratorsPackage.PackageGuidString)]
     [ProvideCodeGenerator(typeof(EPiLabelResourceGenerator), nameof(EPiLabelResourceGenerator), "Generate EPiServer label manager", true)]
     [ProvideCodeGenerator(typeof(CacheProviderGenerator), nameof(CacheProviderGenerator), "Generate cache decorator for interface", true)]
-    public sealed class VSPackage : AsyncPackage
+    public sealed class ESPCodeGeneratorsPackage : AsyncPackage
     {
         /// <summary>
-        /// VSPackage GUID string.
+        /// ESPCodeGeneratorsPackage GUID string.
         /// </summary>
-        public const string PackageGuidString = "755e5da1-2105-4c14-ba6a-10ceb0ce7e06";
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VSPackage"/> class.
-        /// </summary>
-        public VSPackage()
-        {
-            // Inside this method you can place any initialization code that does not require
-            // any Visual Studio service because at this point the package object is created but
-            // not sited yet inside Visual Studio environment. The place to do all the other
-            // initialization is the Initialize method.
-        }
+        public const string PackageGuidString = "3b1f7ef6-f35e-40ba-a504-527cc016f60d";
 
         #region Package Members
 
